@@ -1,3 +1,4 @@
 *.txt
 .env
 node_modules/
+.vscode/
