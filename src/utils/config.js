@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { writeConfig } from "./writeConfig.js";
+import { writeConfig } from "./fsUtils.js";
 
 export const configDir = path.join(os.homedir(), ".lore");
 export const configPath = path.join(configDir, "config.json");

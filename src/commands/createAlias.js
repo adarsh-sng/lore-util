@@ -1,7 +1,7 @@
 import path from "node:path";
 import { configPath } from "../utils/config.js";
-import { readConfig } from "../utils/readConfig.js";
-import { writeConfig } from "../utils/writeConfig.js";
+import { readConfig } from "../utils/fsUtils.js";
+import { writeConfig } from "../utils/fsUtils.js";
 
 export const createAlias = (program) => {
   program
