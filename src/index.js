@@ -3,6 +3,7 @@ import { createAlias } from "./commands/createAlias.js";
 import { ensureConfigFile, configDir, configPath } from "./utils/config.js";
 import { openVS } from "./commands/openCode.js";
 import { fileCreateMessage, startMessage } from "./utils/startScreen.js";
+import { listAlias } from "./commands/listAlias.js";
 
 const program = new Command();
 program
@@ -14,6 +15,7 @@ program
   const firstTime = await ensureConfigFile(configDir, configPath);
   openVS(program);
   createAlias(program);
+  listAlias(program);
   if ((firstTime && process.argv.length <= 2) || process.argv.length <= 2) {
     startMessage(firstTime);
   } else if (firstTime) {
